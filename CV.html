@@ -19,14 +19,36 @@
       <script>
   
         // Alterando dados dos Elementos Cv
-        const titleEl = document.querySelectorAll('#person-name')
+        const titleEl = document.querySelector('#person-name')
         console.log('titleEl value:', titleEl.innerHTML)
   
         titleEl.innerHTML = 'Gustavo Balula'
-        titleEl.style.color = 'Blue'
+        titleEl.style.color = 'red'
         
         // Criando elementos dinâmicos no DOM
-  
+
+        const subTitleEL = document.createElement('h2')
+        subTitleEL.innerHTML = "Projetos"
+
+        const pjListEl = document.createElement('ul')
+
+        const pjListItem1EL = document.createElement('li')
+        pjListItem1EL.innerHTML = 'TODO MVC'
+
+        const pjListItem2EL = document.createElement('li')
+        pjListItem2EL.innerHTML = 'Github API'
+
+        const pjListItem3EL = document.createElement('li')
+        pjListItem3EL.innerHTML = 'eCommerce'
+
+        pjListEl.append(pjListItem1EL)
+        pjListEl.append(pjListItem2EL)
+        pjListEl.append(pjListItem3EL)
+
+        document.body.append(subTitleEL)
+        document.body.append(pjListEl)
+
+      
       </script>
     </body>
   </html>
